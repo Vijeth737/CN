@@ -45,7 +45,6 @@ public class CieClient {
         System.out.println("sequence number - " + clientSeq);
         System.out.println("Ack number – null");
 
-        // Simulate receiving server first packet
         int serverSeq = rand.nextInt(900) + 100;
         int serverAck = clientSeq + 1;
 
@@ -64,7 +63,6 @@ public class CieClient {
             System.out.println("sequence number - " + clientSeq);
             System.out.println("Ack number – " + clientAck);
 
-            // Simulate receiving server response
             serverSeq = serverSeq + 1;
             serverAck = clientSeq + 1;
 
