@@ -180,3 +180,19 @@ $ns at 1.6 "$p7 send"
 $ns at 2.0 "finish"
 
 $ns run
+
+BEGIN {
+    count = 0;
+}
+
+{
+    event = $1;
+
+    if (event == "d") {
+        count++;
+    }
+}
+
+END {
+    printf("No of packets dropped : %d\n", count);
+}
